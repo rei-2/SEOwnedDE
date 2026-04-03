@@ -1,6 +1,12 @@
 name: Build SEOwnedDE DLL
 
 on:
+  push:
+    branches:
+      - x64
+  pull_request:
+    branches:
+      - x64
   workflow_dispatch:
 
 jobs:
@@ -45,4 +51,3 @@ jobs:
           name: SEOwnedDE-SEOwnedDE.dll
           path: SEOwnedDE/bin/ReleaseAVX2/SEOwnedDE.dll
           retention-days: 7
-
